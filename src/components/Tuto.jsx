@@ -1,0 +1,17 @@
+import React, { Component } from 'react'
+
+export default class Tuto extends Component {
+    render() {
+        return (
+            <div className='tuto'>
+                <h1>Tutoriel</h1>
+                <h2>Comment héberger un site Web sur un Raspberry Pi</h2>
+                <div className='tuto-content'>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident molestiae eum modi possimus error nulla atque voluptatem sit tempora. Inventore fuga tempora quisquam laudantium natus quae reprehenderit libero amet, dignissimos obcaecati id unde aliquam nam eius eligendi. Recusandae id quam ducimus soluta? Voluptatum aperiam voluptate animi doloribus mollitia, quisquam optio dignissimos voluptates et ipsam maxime fugit perspiciatis itaque? Fugit modi, suscipit quis ratione perferendis eligendi necessitatibus excepturi quasi quam tenetur molestias odio corrupti quae, eum alias consectetur accusamus. Ullam, earum! Beatae fugiat sed omnis culpa dignissimos. Iure officia sunt impedit modi dolor quasi illo ad quae eveniet necessitatibus est sit inventore deleniti odit architecto molestias corporis repellat optio amet rem natus, beatae totam, laudantium autem? Eos, quibusdam neque voluptatem nulla accusantium similique cumque incidunt, veritatis veniam ipsam sit impedit aliquam. Voluptatem nisi cum facilis vitae modi eum obcaecati, distinctio explicabo possimus officiis voluptatum illum provident hic, velit odit iure harum soluta quidem sapiente ipsum delectus minus! Excepturi beatae consequuntur numquam quod tenetur? Delectus possimus, iste temporibus unde dolorum ad nam asperiores quod harum perferendis deserunt soluta, dicta, libero culpa repellendus dolorem modi? Libero nisi itaque, quos, tempore minima sint harum consequatur ullam incidunt reiciendis corporis voluptatum eveniet totam dignissimos, quibusdam iure velit vitae aperiam enim deleniti ducimus dolorum ea aspernatur! Similique asperiores corporis exercitationem laboriosam! Tenetur ex, obcaecati ipsam ab corrupti ipsum officia exercitationem enim! Quibusdam, nostrum? Consequuntur, praesentium cum atque, temporibus eum deleniti, molestiae delectus quae autem fugit magnam! Ducimus reprehenderit perspiciatis, modi, mollitia quis eos saepe, numquam facere illo pariatur error vel tempora doloremque inventore consectetur eveniet alias voluptatum! Odit accusantium sequi illum doloremque aut officia commodi obcaecati consequuntur eligendi dolor, ut asperiores cupiditate reprehenderit rem dolores sit dolorem ullam nostrum provident veniam hic. Culpa, voluptatibus odio. Maiores temporibus, necessitatibus id delectus eius facilis quia sunt quos accusantium, rerum odio vero ratione facere suscipit sed porro! Velit eos corrupti et eligendi ullam dolorem blanditiis provident enim, tenetur impedit ab quaerat! Assumenda officia a exercitationem magni! Voluptatem delectus alias beatae rerum, a cumque pariatur vel, aliquam hic nemo quia quos! Magni debitis cupiditate minus maxime facilis sapiente? Vitae, odio dolorem accusamus dicta suscipit beatae assumenda esse veritatis quasi repellendus deserunt officia nam ipsum autem asperiores perspiciatis quam cumque dolores consectetur inventore eius iure. Earum voluptas distinctio, quo id exercitationem, ratione aperiam eveniet deserunt, ut culpa nam repellat sapiente? Fuga quo pariatur consequatur placeat omnis eos iusto accusamus debitis aut?
+                    </p>
+                </div>
+            </div >
+        )
+    }
+}
