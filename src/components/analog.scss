@@ -44,26 +44,16 @@
 
 .solar-hand,
 .moon-hand {
-  // position: absolute;
-  // z-index: 7;
-  // width: 1px;
-  // height: 120px;
-
-  // top: 26px;
-  // left: 50%;
-  // margin-left: -1px;
-  // border-top-left-radius: 50%;
-  // border-top-right-radius: 50%;
-  // transform-origin: 50% 125px;
   position: absolute;
   z-index: 7;
-  width: 150px;
+  width: 2px;
   height: 75px;
-  background-color: cyan;
- 
+  background-color: transparent;
+  right: 50%;
   border-top-left-radius: calc(4 * 75px);
   border-top-right-radius: calc(4 * 75px);
   transform-origin: 50% 75px;
+  margin: auto;
   &::after {
     content: "";
     display: block;
@@ -72,14 +62,29 @@
     height: 20px;
     background: gold;
     position: absolute;
-    top: 10px;
-    right: calc(50% - 10px);
-    // transform: translate(-50%);
+    top: 5px;
+    right: calc(100%);
+    transform: translate(50%);
   }
+}
+.day-hand,
+.night-hand {
+  position: absolute;
+  z-index: 7;
+  width: 150px;
+  height: 75px;
+  background-color: cyan;
+  border-top-left-radius: calc(4 * 75px);
+  border-top-right-radius: calc(4 * 75px);
+  transform-origin: 50% 75px;
+  margin: auto;
+}
+.night-hand
+{
+  background-color: black;
 }
 .moon-hand
 {
-  background-color: black;
   &:after
   {
     background-color: wheat;

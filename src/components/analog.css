@@ -47,13 +47,15 @@
 .moon-hand {
   position: absolute;
   z-index: 7;
-  width: 150px;
+  width: 2px;
   height: 75px;
-  background-color: cyan;
+  background-color: transparent;
+  right: 50%;
   border-top-left-radius: calc(4 * 75px);
   border-top-right-radius: calc(4 * 75px);
   -webkit-transform-origin: 50% 75px;
           transform-origin: 50% 75px;
+  margin: auto;
 }
 
 .solar-hand::after,
@@ -65,11 +67,27 @@
   height: 20px;
   background: gold;
   position: absolute;
-  top: 10px;
-  right: calc(50% - 10px);
+  top: 5px;
+  right: calc(100%);
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
 }
 
-.moon-hand {
+.day-hand,
+.night-hand {
+  position: absolute;
+  z-index: 7;
+  width: 150px;
+  height: 75px;
+  background-color: cyan;
+  border-top-left-radius: calc(4 * 75px);
+  border-top-right-radius: calc(4 * 75px);
+  -webkit-transform-origin: 50% 75px;
+          transform-origin: 50% 75px;
+  margin: auto;
+}
+
+.night-hand {
   background-color: black;
 }
 
