@@ -107,7 +107,8 @@ export default class App extends Component {
     this.setState({ active_panel: side })
   }
   setOpacity = (percent) => {
-    this.setState({ opacity: percent / 100 })
+    this.setState({ opacity: 1 - (percent / 100) }, () => console.log(this.state.opacity))
+
     if (percent === 100) {
       this.setState({ show_message: true })
     }
@@ -130,16 +131,11 @@ export default class App extends Component {
     }
     return time.getHours() + ':' + minutes + ':' + seconds
   }
-  componentDidMount = () => {
-    setTimeout(() =>
-      document.querySelector('.App').style.opacity = '1'
 
-      , 1000)
-  }
   render() {
     const { active_panel } = this.state
     return (
-      <div className="App">
+      <div className="App" style={{ opacity: this.state.opacity }}>
 
         {
           this.state.show_message ?
@@ -151,6 +147,8 @@ export default class App extends Component {
             </div>
             :
             <div className="app-content" >
+              <Arrows setActive={this.setActive} />
+              <Horloge setOpacity={this.setOpacity} setSunlight={this.setSunlight} />
               <Cover opacity={this.state.opacity} />
               <Panel side='center' active={active_panel === 'center'}>
                 <About />
@@ -168,8 +166,6 @@ export default class App extends Component {
                 <Tuto />
               </Panel>
 
-              <Arrows setActive={this.setActive} opacity={this.state.opacity} />
-              <Horloge setOpacity={this.setOpacity} setSunlight={this.setSunlight} opacity={this.state.opacity} />
             </div>
         }
       </div>

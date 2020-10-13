@@ -46,7 +46,7 @@ export default class Horloge extends Component {
     }
     timeRemaining = () => {
         const time = new Date()
-        time.setHours(24, 0, 0, 0)
+        // time.setHours(6, 44, 0, 0)
         this.setState({
             time: time,
         }, () => {
@@ -115,7 +115,7 @@ export default class Horloge extends Component {
             percent = 100
             clearInterval(this.clockInterval);
         }
-        // this.props.setOpacity(percent)
+        this.props.setOpacity(percent)
 
 
     }
@@ -181,6 +181,7 @@ export default class Horloge extends Component {
         }
 
         //Calcul du degré Soleil Lune
+
         let degree = 0
         if (sTime < sNoon) {
             const position = sTime - sSunrise
@@ -195,15 +196,14 @@ export default class Horloge extends Component {
         else {
             degree = 0
         }
-        console.log(degree)
-        // let degree = this.getTimeDegree() + 90
+     
+       
         let degreeS = degree - 90
         let degreeM = degree + 90
 
         // let degreeS = Math.abs(SunCalc.getPosition(new Date(), this.state.latitude, this.state.longitude).altitude * 57.2958)
         // let degreeM = Math.abs(SunCalc.getMoonPosition(time, this.state.latitude, this.state.longitude).altitude * 57.2958)
-        console.log(degreeS)
-        console.log(degreeM)
+
 
         sunHand.style.transform = "rotate(" + degreeS + "deg)";
         moonHand.style.transform = "rotate(" + degreeM + "deg)";
@@ -212,7 +212,7 @@ export default class Horloge extends Component {
     render() {
         const { aube, crepuscule, sunrise, sunset, time_from_noon, time_until_sunset, time_since_sunrise, time, noon } = this.state
         return (
-            <div className="horloge" style={{ opacity: 1 - this.props.opacity }}>
+            <div className="horloge" >
 
                 <div className="clock-container">
                     <div className="clock">

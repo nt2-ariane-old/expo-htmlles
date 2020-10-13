@@ -81,7 +81,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1005;
 }
 
 .arrow {
@@ -91,6 +90,7 @@ body {
   border: none;
   outline: none;
   position: absolute;
+  z-index: 2000;
   cursor: pointer;
   font-size: 2rem;
   color: blue;
@@ -142,31 +142,39 @@ body {
           flex-direction: column;
 }
 
-.oeuvre .oeuvre-title {
-  text-align: center;
-  font-size: 3rem;
-}
-
 .oeuvre .oeuvre-video {
   width: 100%;
-  height: 75%;
+  height: 100%;
   position: relative;
-  z-index: 1010;
+  z-index: 1000;
 }
 
-.oeuvre .oeuvre-video video {
+.oeuvre .oeuvre-video iframe {
   width: 100%;
-  height: 100%;
+  height: 540px;
+  margin: auto;
+  display: block;
   background: black;
 }
 
-.oeuvre .oeuvre-description {
-  position: relative;
-  z-index: 500;
+.oeuvre .oeuvre-infos {
+  width: 100%;
   background-color: white;
-  border-radius: 10px;
-  margin: 2rem;
+  margin-bottom: 3rem;
+  border: 2px solid white;
+}
+
+.oeuvre .oeuvre-title {
+  text-align: left;
+  font-size: 3rem;
   padding: 1rem;
+}
+
+.oeuvre .oeuvre-description {
+  padding: 1rem;
+  border-top: 1px solid #e3e8e9;
+  font-size: 18px;
+  text-align: justify;
 }
 
 .horloge {
@@ -195,7 +203,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
   background-color: black;
   width: 100vw;
   height: 100vh;
